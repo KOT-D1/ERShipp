@@ -1,0 +1,59 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import { SITE } from "@data/constants";
+
+
+// Define variables for page content
+const title: string = "Equipo de Trabajo";
+const subTitle: string =
+  "Aqui viene un poco del apartado del equipo de trabajo donde trabajo cada uno, que mejoras dio al equipo o trabajo en general.";
+
+
+
+const pageTitle: string = `Nosotros | ${SITE.title}`;
+
+const testimonials = [
+
+{
+    author: "Ashley Aguilar Hidalgo",
+    content:
+      "It was a pleasure to do this project with so much effort and perseverance with my expotec team. My role as part of the team was as follows: in charge of the decoration of the Stan, researching the ership prototype and assistant in the mechanical part of the project.",
+  },
+
+  {
+    author: "Carlos Cambronero Jimenez",
+    content:
+      "He was in charge of programming the team's hardware, responsible for the project's hardware and for assembling the electrical part and cables at the time of its final assembly, he was in charge of all the boat tests for its final prototype.",
+  },  
+
+  {
+    author: "Marco Moya Dawkins",
+    content:
+      "He was in charge of programming the equipment's hardware and assembling the electrical part and cables at the time of its final assembly, he was in charge of all the tests of the boat for its final prototype.",
+  },
+
+  {
+    author: "Kevin Osorio Thurman",
+    content:
+      "In the team he did: The development part of the written work, development of the website, design and uploading it to the Internet, obtaining materials for construction. Help with testing, assembly of the boat, cutting and assembly of the electrical part giving the positioning." ,
+  },
+  {
+    author: "Johan Rivas Nuñez",
+    content:
+      "His role in this project was to be in charge of all the mechanical parts such as the mills, the ship's detection support and part of the general design of the project. I was also the designer of the mechanical plans, flow diagrams and electrical diagrams. Finally, I was in charge of the operation of the engines.",
+  },
+];
+
+---
+
+
+<MainLayout
+  title={pageTitle}
+>
+  <TestimonialsSectionAlt
+    title="Team"
+    testimonials={testimonials}
+  />
+</MainLayout>

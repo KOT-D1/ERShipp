@@ -1,0 +1,78 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import ERShip from "@components/sections/landing/HeroSection.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+
+import features from "@data/features.json";
+import featureImage from "@images/Barco.png";
+import Ocean from "@images/theoceancleanup.png";
+import Sea from "@images/Seacleaners.png";
+import Razer from "@images/Ryzer.jpg";
+
+
+---
+
+<MainLayout>
+
+  <ERShip
+    title=`<span
+        class="text-cyan-500 dark:text-#13c8b5">ERShip</span>`
+    subTitle="boat that is capable of collecting all the garbage found on the coasts of the beaches, in order to improve these ecosystems and help the marine species that are affected by all the amount of waste. For which, What this boat is going to do is scan the beach and when it sees any type of waste, the boat will go directly to pick it up and store it inside."
+    withReview={true}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    alt="ERShip"
+  />
+
+  <ClientsSection
+    title="How it works"
+    subTitle="What this boat is going to do is scan the beach and when it sees any type of waste, the boat will go directly to pick it up and store it inside."
+  />
+
+  <FeaturesGeneral
+    title="Advantages"
+    subTitle="Here we are going to leave several advantages that our boat has or will leave in the territory"
+    src={featureImage}
+    alt="The boat in photos before the water"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=` <span class="text-emerald-500 dark:text-cyan-400">The Background</span>`
+    subTitle="The Background were projects or companies from which inspiration was taken."
+    tabs={[
+      {
+        heading: "The Ocean Cleanup",
+        content:
+          "The Ocean Cleanup is a company that seeks to remove plastic from Oceans and Rivers throughout the world. The plastic they remove is one of the 5 plastic stains in the world.",
+        svg: "tools",
+        src: Ocean,
+        alt: "The Ocean Cleanup",
+        first: true,
+      },
+      {
+        heading: "SeaCleaners",
+        content:
+          "The SeaCleaners company cleans plastic from the oceans with its boats: El Mantas and Las Misiones Mobula.",
+        svg: "dashboard",
+        src: Sea,
+        alt: "The Sea Cleaners",
+        second: true,
+      },
+      {
+        heading: "Ryzer",
+        content:
+          "The Ryzer company teamed up with Cleanbot to develop a boat to reduce the company's carbon footprint and be 0 footprint by 2030.",
+        svg: "house",
+        src: Razer,
+        alt: "Ryzer x Cleanbot",
+      },
+    ]}
+  />
+
+  
+</MainLayout>

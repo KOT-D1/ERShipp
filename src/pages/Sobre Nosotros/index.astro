@@ -1,0 +1,59 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import { SITE } from "@data/constants";
+
+
+// Define variables for page content
+const title: string = "Equipo de Trabajo";
+const subTitle: string =
+  "Aqui viene un poco del apartado del equipo de trabajo donde trabajo cada uno, que mejoras dio al equipo o trabajo en general.";
+
+
+
+const pageTitle: string = `Nosotros | ${SITE.title}`;
+
+const testimonials = [
+
+  {
+    author: "Ashley Aguilar Hidalgo",
+    content:
+      "Fue un placer hacer este proyecto con tanto esfuerzo y perseverancia con mi equipo de expotec. El rol como parte del equipo fueron la siguiente: encargada de la decoración del Stan, investigar del prototipo ership y ayudante en la parte mecánica del proyecto.",
+  },
+
+  {
+    author: "Carlos Cambronero Jimenez",
+    content:
+      "Fue el encargado de la creacion de parte de diseño del barco, Ayudo en montaje del stand y trabajo escrito, encargado de las bitacoras, ayuda en el armado del exterior del barco y su ensamblaje y examinar en las pruebas que no salga nada mal..",
+  },  
+
+  {
+    author: "Marco Moya Dawkins",
+    content:
+      " Fue el encargado de la programación del hardware del equipo, responsable del hardware del proyecto y de montar la parte electrica y los cables en el momento de su ensamblaje final, fue el encargado de todas las pruebas del barco para su prototipo final.",
+  },
+
+  {
+    author: "Kevin Osorio Thurman",
+    content:
+      "En el equipo hizo: El desarrollo parte del trabajo escrito, desarrollo la pagina web, diseño y subirla a internet, consiguiendo materiales para la construcción. ayuda con pruebas, ensamblaje del barco, corte y ensamble de la parte electrica dando el posicionamiento.",
+  },
+  {
+    author: "Johan Rivas Nuñez",
+    content:
+      "Su rol en este proyecto fue ser el encargado en toda la parte de las piezas mecanicas como los molinos, el soporte de deteccion del barco y parte del diseño general del proyecto. Tambien fui el diseñador los planos mecanicos, diagramas de flujo y electricos. Por ultimo me encargue del funcionamiento de los motores.",
+  },
+];
+
+---
+
+
+<MainLayout
+  title={pageTitle}
+>
+  <TestimonialsSectionAlt
+    title="Equipo"
+    testimonials={testimonials}
+  />
+</MainLayout>

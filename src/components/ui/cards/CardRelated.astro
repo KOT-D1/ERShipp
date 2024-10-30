@@ -1,0 +1,14 @@
+---
+// Import necessary modules and utilities
+import { Image } from "astro:assets";
+import { formatDate } from "@utils/utils";
+import type { CollectionEntry } from "astro:content";
+
+const { blogEntry, recentBlogLocale = "" } = Astro.props;
+
+interface Props {
+  blogEntry: CollectionEntry<"blog">;
+  recentBlogLocale?: string;
+}
+---
+
